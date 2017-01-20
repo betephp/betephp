@@ -4,6 +4,8 @@ return [
 
     'env' => ini('APP_ENV', 'prod'),
 
+    'debug' => ini('APP_DEBUG', false),
+
     'locale' => 'zh',
 
     'key' => ini('APP_KEY', ''),
