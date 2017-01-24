@@ -7,7 +7,7 @@ use App\Exception\Exception;
 
 class CheckLogin extends Middleware
 {
-    public function beforeAction($action)
+    public function beforeAction()
     {
         if (app()->request->get('isLogin') !== null) {
             if (app()->request->get('isLogin') != 1) {
@@ -18,7 +18,7 @@ class CheckLogin extends Middleware
         }
     }
 
-    public function afterAction($action, $result)
+    public function afterAction($result)
     {
         return $result;
     }
