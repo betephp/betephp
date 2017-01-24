@@ -1,4 +1,10 @@
-<h2>简介</h2>
+<h2>Welcome to BetePHP.</h2>
 <div>
-    <p>BetePHP是一个高性能快速开框架，框架只包含请求响应处理、数据校验、数据库封装（Redis）、Log基础组件；由于框架无外部库依赖，本身仅有80个文件，相比其他框架5000+文件，运行时大大降低文件IO损耗，框架性能高损耗小。</p>
+    <div>太棒了，你的系统环境配置符合BetePHP的运行要求。</div>
+    <ul>
+        <li>PHP版本：>= 5.4.0</li>
+        <li>PDO扩展：已安装</li>
+        <li>OpenSSL扩展：已安装</li>
+        <li>MbString扩展：已安装</li>
+    </ul>
 </div>

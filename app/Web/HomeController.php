@@ -12,9 +12,4 @@ class HomeController extends Controller
     {
         return $this->render('index', []);
     }
-
-    public function actionTest(Request $request)
-    {
-        return "hello world";
-    }
 }

@@ -9,15 +9,20 @@ class ExampleController extends Controller
     public $layout = 'main';
 
     public $middlewares = [
-        'CheckLogin' => '* - login,register',
+        'CheckLogin' => 'middleware',
     ];
 
-    public function actionConsole(Request $request)
+    public function index()
     {
-        return $this->render('example/middleware');
+        return 'index';
     }
 
-    public function actionDatabase(Request $request)
+    public function console(Request $request)
+    {
+        return $this->render('middleware');
+    }
+
+    public function database(Request $request)
     {
         if ($request->isPost()) {
             $user = new User();
@@ -27,20 +32,20 @@ class ExampleController extends Controller
             $res = $user->save();
         }
 
-        return $this->render('example/database');
+        return $this->render('database');
     }
 
-    public function actionMiddleware(Request $request)
+    public function middleware(Request $request)
     {
-        return $this->render('example/middleware');
+        return $this->render('middleware');
     }
 
-    public function actionRoute(Request $request)
+    public function route(Request $request)
     {
-        return $this->render('example/route');
+        return $this->render('route');
     }
 
-    public function actionValidation(Request $request)
+    public function validation(Request $request)
     {
         if ($request->isPost()) {
             $data = $request->post();
@@ -59,16 +64,42 @@ class ExampleController extends Controller
             app()->response->redirect('/example/validation');
         }
 
-        return $this->render('example/validation');
+        return $this->render('validation');
     }
 
-    public function actionWeb(Request $request)
+    public function web(Request $request)
     {
         $data = [
             'get' => $request->get(),
             'post' => $request->post(),
         ];
-        return $this->render('example/web', $data);
+        
+        return $this->render('web', $data);
     }
 
+    public function actionSession(Request $request)
+    {
+        if ($request->post('username')) {
+            app()->session->set('username', $request->post('username'));
+            app()->response->redirect('/example/cookieSession');
+        }
+        if ($request->post('message')) {
+            app()->session->setFlash('message', $request->post('message'));
+            app()->response->redirect('/example/cookieSession');
+        }
+        if ($request->post('source')) {
+            app()->cookie->set('source', 'google');
+            app()->response->redirect('/example/cookieSession');
+        }
+        return $this->render('session');
+    }
+
+    public function actionLog(Request $request)
+    {
+        app()->log->info('logIt');
+        
+        app()->log->data('some_thing_happen');
+
+        return $this->render('log');
+    }
 }
