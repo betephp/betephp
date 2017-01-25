@@ -6,3 +6,4 @@ $app = require(__DIR__ . '/bootstrap/app.php');
 $core = $app->make('Bete\Console\Core');
 
 $core->run();
+

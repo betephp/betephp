@@ -9,20 +9,20 @@ class ExampleController extends Controller
     public $layout = 'main';
 
     public $middlewares = [
-        'CheckLogin' => 'middleware',
+        'CheckLogin' => 'middleware,list - list',
     ];
 
-    public function index()
+    public function actionIndex()
     {
         return 'index';
     }
 
-    public function console(Request $request)
+    public function actionConsole(Request $request)
     {
         return $this->render('middleware');
     }
 
-    public function database(Request $request)
+    public function actionDatabase(Request $request)
     {
         if ($request->isPost()) {
             $user = new User();
@@ -35,17 +35,17 @@ class ExampleController extends Controller
         return $this->render('database');
     }
 
-    public function middleware(Request $request)
+    public function actionMiddleware(Request $request)
     {
         return $this->render('middleware');
     }
 
-    public function route(Request $request)
+    public function actionRoute(Request $request)
     {
         return $this->render('route');
     }
 
-    public function validation(Request $request)
+    public function actionValidation(Request $request)
     {
         if ($request->isPost()) {
             $data = $request->post();
@@ -67,7 +67,7 @@ class ExampleController extends Controller
         return $this->render('validation');
     }
 
-    public function web(Request $request)
+    public function actionWeb(Request $request)
     {
         $data = [
             'get' => $request->get(),
