@@ -20,7 +20,6 @@ return [
     'components' => [
         'Bete\Database\DatabaseComponent',
         'Bete\Validation\ValidationComponent',
-        'Bete\View\ViewComponent',
         'Bete\Redis\RedisComponent',
         'Bete\Cookie\CookieComponent',
         'Bete\Session\SessionComponent',

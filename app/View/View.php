@@ -1,11 +1,10 @@
 <?php
 
-namespace App\Web;
+namespace App\View;
 
-use Bete\Web\Response As BaseResponse;
-use Bete\Web\View;
+use Bete\View\View as BaseView;
 
-class Response extends BaseResponse
+class View extends BaseView
 {
     public function json($data, $code = 0, $message = 'OK')
     {

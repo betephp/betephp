@@ -14,7 +14,7 @@ class ExampleController extends Controller
 
     public function actionIndex()
     {
-        return 'index';
+        return 'This is index action.';
     }
 
     public function actionConsole(Request $request)
@@ -81,15 +81,15 @@ class ExampleController extends Controller
     {
         if ($request->post('username')) {
             app()->session->set('username', $request->post('username'));
-            app()->response->redirect('/example/cookieSession');
+            app()->response->redirect('/example/session');
         }
         if ($request->post('message')) {
             app()->session->setFlash('message', $request->post('message'));
-            app()->response->redirect('/example/cookieSession');
+            app()->response->redirect('/example/session');
         }
         if ($request->post('source')) {
             app()->cookie->set('source', 'google');
-            app()->response->redirect('/example/cookieSession');
+            app()->response->redirect('/example/session');
         }
         return $this->render('session');
     }
