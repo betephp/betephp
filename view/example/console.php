@@ -1,27 +1,25 @@
-<h2>Console命令行</h2>
-<div>在Console Action中，你可以通过Request对象获取命令行参数、选项值。</div>
-<br>
-./bete example:dailyUpdate --num=10 --sleep=1 blog
+<h2>Console模式</h2>
+<div>Console模式下，下面的命令执行的代码逻辑位于app\Console\ExampleController的actionDailyUpdate方法中。</div>
 <pre>
-参数：
+./bete example:dailyUpdate --num=10 --sleep=1 blog
+</pre>
+<br>
+变量参数：
+<pre>
 Array
 (
     [1] => blog
 )
 </pre>
+选项参数：
 <pre>
-选项：
 Array
 (
     [num] => 10
     [sleep] => 1
 )
 </pre>
-<pre>
-app()->request->param() #获取命令行变量参数
-app()->request->option() #获取命令行OPTION参数
-</pre>
 <h3>相关文件</h3>
 <ul>
-    <li>app/Console/Example/DailyUpdate.php</li>
+    <li>app/Console/ExampleController.php</li>
 </ul>

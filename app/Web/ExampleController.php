@@ -12,14 +12,34 @@ class ExampleController extends Controller
         'CheckLogin' => 'middleware,list - list',
     ];
 
-    public function actionIndex()
+    public function actionIndex(Request $request)
     {
         return 'This is index action.';
     }
 
-    public function actionConsole(Request $request)
+    public function actionRoute(Request $request)
+    {
+        return $this->render('route');
+    }
+
+    public function actionMiddleware(Request $request)
     {
         return $this->render('middleware');
+    }
+
+    public function actionWeb(Request $request)
+    {
+        $data = [
+            'get' => $request->get(),
+            'post' => $request->post(),
+        ];
+        
+        return $this->render('web', $data);
+    }
+
+    public function actionConsole(Request $request)
+    {
+        return $this->render('console');
     }
 
     public function actionDatabase(Request $request)
@@ -33,16 +53,6 @@ class ExampleController extends Controller
         }
 
         return $this->render('database');
-    }
-
-    public function actionMiddleware(Request $request)
-    {
-        return $this->render('middleware');
-    }
-
-    public function actionRoute(Request $request)
-    {
-        return $this->render('route');
     }
 
     public function actionValidation(Request $request)
@@ -65,16 +75,6 @@ class ExampleController extends Controller
         }
 
         return $this->render('validation');
-    }
-
-    public function actionWeb(Request $request)
-    {
-        $data = [
-            'get' => $request->get(),
-            'post' => $request->post(),
-        ];
-        
-        return $this->render('web', $data);
     }
 
     public function actionSession(Request $request)

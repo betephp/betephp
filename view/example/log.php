@@ -14,5 +14,5 @@ app()->log->data('event_name', $extra);
 </pre>
 <h3>相关文件</h3>
 <ul>
-    <li>app/Web/Example/Log.php</li>
+    <li>app/Web/ExampleController.php</li>
 </ul>
