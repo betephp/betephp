@@ -16,7 +16,6 @@
     <div><input type="text" class="input-text" name="title" placeholder="标题"></div>
     <div><input type="text" class="input-text" name="content" placeholder="内容"></div>
     <div><input type="text" class="input-text" name="name" placeholder="姓名"></div>
-    <div><input type="text" class="input-text" name="mobile" placeholder="手机"></div>
     <div><input type="text" class="input-text" name="email" placeholder="邮箱"></div>
     <div><input type="submit" class="input-submit" name="sub" value="提交"></div>
 

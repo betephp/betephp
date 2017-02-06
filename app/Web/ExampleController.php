@@ -63,7 +63,6 @@ class ExampleController extends Controller
                 'title' => 'required|string|between:5,50|name:标题',
                 'content' => 'required|string|between:10,1000|name:内容',
                 'name' => 'required|chinese|between:2,20|name:姓名',
-                'mobile' => 'required|mobile|name:手机号码',
                 'email' => 'required|email|name:邮箱地址',
             ];
 
