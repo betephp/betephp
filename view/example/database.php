@@ -18,5 +18,5 @@ ALTER TABLE `user` MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT;
 </pre>
 <h3>相关文件</h3>
 <ul>
-    <li>app/Web/Example/Database.php</li>
+    <li>app/Web/ExampleController.php</li>
 </ul>

@@ -2,7 +2,6 @@
 
 namespace App\Exception;
 
-use Exception;
 use Bete\Exception\Handler as ExceptionHandler;
 
 class Handler extends ExceptionHandler
@@ -11,12 +10,12 @@ class Handler extends ExceptionHandler
         'Bete\Exception\ValidationException',
     ];
 
-    public function renderJsonException(Exception $e)
+    public function renderJsonException($e)
     {
         return parent::renderJsonException($e);
     }
 
-    public function renderHtmlException(Exception $e)
+    public function renderHtmlException($e)
     {
         return parent::renderHtmlException($e);
     }

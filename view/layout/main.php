@@ -77,9 +77,9 @@ input[type=submit] {
             <li><a href="/example/web?id=1&name=BetePHP">Web</a></li>
             <li><a href="/example/console">Console</a></li>
             <li><a href="/example/validation">验证</a></li>
-            <li><a href="/example/cookieSession">Session</a></li>
+            <li><a href="/example/session">Session</a></li>
             <li><a href="/example/database">数据库</a></li>
-            <li><a href="/example/log">日志</a></li>
+            <!-- <li><a href="/example/log">日志</a></li> -->
         </ul>
     </div>
     <div class="content">
