@@ -36,9 +36,7 @@
     }
 </style>
 </head>
-
 <body>
-
 <div id="wrapper">
     <h1>BetePHP</h1>
     <div class="links">
@@ -47,7 +45,5 @@
     </div>
     <div class="welcome">Welcome to use BetePHP, let's make world better.</div>
 </div>
-
 </body>
-
 </html>
