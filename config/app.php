@@ -8,8 +8,6 @@ return [
 
     'locale' => 'zh',
 
-    'key' => ini('APP_KEY', ''),
-
     'timezone' => 'Asia/Shanghai',
 
     'log' => [
@@ -18,12 +16,11 @@ return [
     ],
 
     'components' => [
-        'Bete\Database\DatabaseComponent',
         'Bete\Validation\ValidationComponent',
+        'Bete\Database\DatabaseComponent',
         'Bete\Redis\RedisComponent',
         'Bete\Cookie\CookieComponent',
         'Bete\Session\SessionComponent',
-        'Bete\Encrypt\EncryptComponent',
     ],
     
 ];
