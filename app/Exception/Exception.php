@@ -8,8 +8,8 @@ class Exception extends \Exception
     const SYS_CHECKTOKEN_FAIL = 100201;
 
     public $messageMap = [
-        self::SYS_ERROR_UNKNOWN => '未知错误',
-        self::SYS_CHECKTOKEN_FAIL => '签名校验失败',
+        self::SYS_ERROR_UNKNOWN => 'Unknown error.',
+        self::SYS_CHECKTOKEN_FAIL => 'Fail to check token.',
     ];
 
     public function __construct($code = 0)

@@ -11,10 +11,4 @@ class ExampleController extends Controller
     {
         return "Hello, this is index action.\n";
     }
-
-    public function actionDailyUpdate(Request $request)
-    {
-        print_r($request->param()); 
-        print_r($request->option());
-    }
 }

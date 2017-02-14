@@ -9,13 +9,7 @@ class CheckLogin extends Middleware
 {
     public function beforeAction()
     {
-        if (app()->request->get('isLogin') !== null) {
-            if (app()->request->get('isLogin') != 1) {
-                app()->response->redirect('/');
-            }
-
-            echo "<div style='background: #5cb85c; color: #FFF;'>CheckLogin中间件通过</div><br>";
-        }
+        return true;
     }
 
     public function afterAction($result)
