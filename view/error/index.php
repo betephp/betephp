@@ -32,9 +32,9 @@
 </head>
 <body>
 <div id="wrapper">
-    <h1>Whoops, something went wrong.</h1>
+    <h1><?= $title ?></h1>
 
-    <?php if ($message) : ?>
+    <?php if (app()->env('dev')) : ?>
     <div id="content">
         <div class="hd"><?= $message ?></div>
         <div class="bd">
