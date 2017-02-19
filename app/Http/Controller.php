@@ -1,8 +1,8 @@
 <?php
 
-namespace App\Web;
+namespace App\Http;
 
-use Bete\Web\Controller as BaseController;
+use Bete\Http\Controller as BaseController;
 
 class Controller extends BaseController
 {
