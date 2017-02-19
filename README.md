@@ -17,8 +17,8 @@ BetePHP is a lightweight, high performance PHP framework. we believe a good PHP 
 
 Thank you for considering contributing to the BetePHP framework, please fork the corresponding repository, submit pull request to it.
 
-BetePHP core framework: https://github.com/betephp/framework
-
 BetePHP: https://github.com/betephp/betephp
 
-Documentation: http://git.oschina.net/betephp/docs
+BetePHP core framework: https://github.com/betephp/framework
+
+Documentation: https://github.com/betephp/docs
