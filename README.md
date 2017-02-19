@@ -1,5 +1,9 @@
 # BetePHP
 
+[![Build Status](https://travis-ci.org/betephp/framework.svg?branch=master)](https://travis-ci.org/betephp/framework)
+[![Latest Stable Version](https://poser.pugx.org/betephp/framework/v/stable)](https://packagist.org/packages/betephp/framework)
+[![License](https://poser.pugx.org/betephp/framework/license)](https://packagist.org/packages/betephp/framework)
+
 BetePHP is a lightweight, high performance PHP framework. we believe a good PHP framework should be simple, clean and don't effect performance too much, BetePHP is combined by some frequently used component, without dependency on any composer package, the main feature include:
 
 * Flexible route engine.
